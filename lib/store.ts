@@ -1,35 +1,14 @@
-import { fetchOdds } from "./draftkings";
+import { fetchOdds } from "./draftkings.ts";
 import type { League } from "./leagues";
 import type { Game, MarketKind, Snapshot } from "./types";
 
 /**
  * Process-wide cache of the latest DraftKings snapshot.
- *
- * On Vercel this lives per warm function instance, so two concurrent instances
- * poll DraftKings independently. That is fine at this scale — the point of the
- * cache is that N browsers watching the page do not become N× load upstream.
- */
-
-/**
- * How long a snapshot is considered fresh enough to serve without refetching.
- * Kept just under the poll interval so the stream never serves a stale frame,
- * while still collapsing concurrent callers onto one upstream request.
- */
+*/
 const POLL_MS = Number(process.env.DK_POLL_MS) || 1000;
 const CACHE_TTL_MS = Math.max(100, Math.floor(POLL_MS * 0.75));
 /** Past this age with no successful fetch, the UI stops trusting the numbers. */
 export const STALE_AFTER_MS = 10_000;
-/**
- * Floor on how fresh a forced refresh insists on being. The Refresh button
- * bypasses the normal TTL, but not this: without a floor every click maps 1:1
- * onto an upstream request, and a held-down button (or a script hitting
- * `/api/odds?force=1`) is unbounded load on DraftKings.
- *
- * Derived from the poll interval rather than fixed, so it stays *below*
- * CACHE_TTL_MS at every setting. A fixed 500 ms would exceed the 375 ms TTL at
- * DK_POLL_MS=500 and invert the whole point of the button — Refresh would
- * refuse to refetch data the background poll was about to replace anyway.
- */
 const FORCE_MIN_AGE_MS = Math.max(100, Math.min(500, Math.floor(POLL_MS * 0.5)));
 /** Backoff schedule after consecutive upstream failures. */
 const BACKOFF_MS = [1_000, 2_000, 5_000, 10_000, 15_000];
@@ -39,15 +18,12 @@ type SideState = {
   line?: number;
   prevOdds?: number;
   prevLine?: number;
-  /** Epoch ms of the last move; 0 means "never moved since we started watching". */
   changedAt: number;
 };
 
 /**
  * Per-league state. Each league polls independently and keeps its own price
- * history, cache age and backoff — an MLB outage must not mark NFL stale, and
- * the single-flight guard has to be per-league or one league's in-flight
- * request would satisfy another's caller with the wrong sport's data.
+ * history, cache age
  */
 type LeagueState = {
   lastGames: Game[];
