@@ -35,7 +35,6 @@ test("maps a game to the clean shape", () => {
 
 test("parses DraftKings' U+2212 minus sign as a negative number", () => {
   const [g] = normalize(game());
-  // A naive Number("−247") is NaN; the side would silently vanish.
   assert.equal(g.markets.moneyline?.sides[1].odds, -247);
 });
 
@@ -54,7 +53,7 @@ test("survives junk at the top level", () => {
 
 test("skips a malformed game instead of dropping the whole slate", () => {
   const mixed = game();
-  mixed.events.unshift({ id: "bad" } as never); // no date, no participants
+  mixed.events.unshift({ id: "bad" } as never); 
   const out = normalize(mixed);
   assert.equal(out.length, 1);
   assert.equal(out[0].id, "1");
