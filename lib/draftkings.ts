@@ -182,6 +182,23 @@ export function normalize(payload: unknown): Game[] {
 
 export type FetchResult = { games: Game[]; fetchMs: number };
 
+/**
+ * Error response body
+ */
+async function describeBody(res: Response): Promise<string> {
+  try {
+    const raw = await res.text();
+    const text = raw
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!text) return "";
+    return ` — ${text.slice(0, 200)}${text.length > 200 ? "…" : ""}`;
+  } catch {
+    return "";
+  }
+}
+
 export async function fetchOdds(league: League): Promise<FetchResult> {
   const started = Date.now();
   const controller = new AbortController();
@@ -194,7 +211,9 @@ export async function fetchOdds(league: League): Promise<FetchResult> {
       cache: "no-store",
     });
     if (!res.ok) {
-      throw new Error(`DraftKings returned HTTP ${res.status}`);
+      throw new Error(
+        `DraftKings returned HTTP ${res.status}${await describeBody(res)}`,
+      );
     }
 
     let payload: unknown;

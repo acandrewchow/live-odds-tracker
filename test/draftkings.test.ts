@@ -27,12 +27,16 @@ const body = JSON.stringify({
 
 let server: Server;
 let received: IncomingHttpHeaders = {};
-let mode: "ok" | "503" | "html" | "slow" = "ok";
+let mode: "ok" | "503" | "html" | "slow" | "akamai" = "ok";
 
 before(async () => {
   server = createServer((req, res) => {
     received = req.headers;
     if (mode === "503") return void res.writeHead(503).end("down");
+    if (mode === "akamai")
+      return void res
+        .writeHead(403, { "Content-Type": "text/html" })
+        .end(`<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access "http://sportsbook-nash.draftkings.com/api/" on this server.<P>\nReference&#32;&#35;18.ab182117.1789351020.56158905\n</BODY>\n</HTML>`);
     if (mode === "html") return void res.writeHead(200, { "Content-Type": "text/html" }).end("<html/>");
     if (mode === "slow") return; // never responds — exercises the abort timeout
     res.writeHead(200, { "Content-Type": "application/json" }).end(body);
@@ -92,6 +96,23 @@ test("a hanging upstream aborts instead of blocking forever", async () => {
   await assert.rejects(() => fetchOdds(league));
   const elapsed = Date.now() - started;
   assert.ok(elapsed < 6_000, `took ${elapsed}ms — the abort timeout did not fire`);
+});
+
+test("an Akamai block surfaces what kind of block it is", async () => {
+  mode = "akamai";
+  // "HTTP 403" alone cannot distinguish an edge ACL on cloud IP ranges from a
+  // bot-manager challenge, and those have different fixes. The body names it.
+  await assert.rejects(
+    () => fetchOdds(league),
+    (err: Error) => {
+      assert.match(err.message, /HTTP 403/);
+      assert.match(err.message, /Access Denied/);
+      assert.match(err.message, /Reference/);
+      assert.ok(!err.message.includes("<"), "HTML tags should be stripped");
+      assert.ok(err.message.length < 300, `message too long: ${err.message.length}`);
+      return true;
+    },
+  );
 });
 
 test("dkUrl carries the league through, override or not", async () => {
