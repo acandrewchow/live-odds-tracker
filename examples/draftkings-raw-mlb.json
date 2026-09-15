@@ -1,0 +1,484 @@
+{
+  "_comment": "Unmodified DraftKings response, trimmed to one event. Note the handicap market is named 'Run Line', not 'Spread'.",
+  "sports": [
+    {
+      "id": "7",
+      "seoIdentifier": "Baseball",
+      "name": "Baseball",
+      "sortOrder": 58
+    }
+  ],
+  "leagues": [
+    {
+      "id": "84240",
+      "name": "MLB",
+      "sportId": "7",
+      "sortOrder": 4855,
+      "tags": [
+        "OSB",
+        "FeaturedSubcategory",
+        "Flashbet",
+        "LiveBoxScore",
+        "SGP",
+        "SgpDynamicOdds",
+        "YourBetEligible",
+        "EarlyExit",
+        "Featured",
+        "HasLiveEvents",
+        "LiveFeaturedSubcategory",
+        "FavoriteableFromPage"
+      ],
+      "regions": [
+        {
+          "id": "227",
+          "name": "United States"
+        }
+      ],
+      "isTeamSwap": true,
+      "featured": true
+    }
+  ],
+  "events": [
+    {
+      "id": "34664940",
+      "seoIdentifier": "CHI White Sox @ CLE Guardians",
+      "sportId": "7",
+      "leagueId": "84240",
+      "name": "CHI White Sox @ CLE Guardians",
+      "startEventDate": "2026-09-14T22:40:47.0000000Z",
+      "participants": [
+        {
+          "id": "29913",
+          "name": "CLE Guardians",
+          "venueRole": "Home",
+          "type": "Team",
+          "metadata": {
+            "rosettaTeamId": "29913",
+            "rosettaTeamName": "Guardians",
+            "shortName": "CLE",
+            "startingPitcherPlayerId": "163181",
+            "teamColor": "#E31937",
+            "teamColorSecondary": "#002B5C",
+            "teamColorTertiary": "#FFFFFF",
+            "startingPitcherPlayerName": "Gavin Williams"
+          },
+          "sortOrder": 2,
+          "seoIdentifier": "Guardians",
+          "isNationalTeam": false,
+          "countryCode": "US"
+        },
+        {
+          "id": "29970",
+          "name": "CHI White Sox",
+          "venueRole": "Away",
+          "type": "Team",
+          "metadata": {
+            "rosettaTeamId": "29970",
+            "rosettaTeamName": "White Sox",
+            "shortName": "CWS",
+            "startingPitcherPlayerId": "109099",
+            "teamColor": "#000000",
+            "teamColorSecondary": "#C4CED4",
+            "teamColorTertiary": "#27251F",
+            "startingPitcherPlayerName": "Sean Newcomb"
+          },
+          "sortOrder": 1,
+          "seoIdentifier": "White Sox",
+          "isNationalTeam": false,
+          "countryCode": "US"
+        }
+      ],
+      "eventParticipantType": "TwoTeam",
+      "status": "STARTED",
+      "liveGameState": {
+        "period": "4th"
+      },
+      "eventScorecard": {
+        "mainScorecard": {
+          "liveScoreData": {
+            "onServe": "2",
+            "baseballBase": "6",
+            "baseballOuts": "0"
+          },
+          "intervalName": "T",
+          "intervalNumber": 2147483647,
+          "firstTeamScore": "0",
+          "secondTeamScore": "0"
+        },
+        "scorecards": [
+          {
+            "intervalName": "1",
+            "intervalNumber": 1,
+            "firstTeamScore": "0",
+            "secondTeamScore": "0"
+          },
+          {
+            "intervalName": "2",
+            "intervalNumber": 2,
+            "firstTeamScore": "0",
+            "secondTeamScore": "0"
+          },
+          {
+            "intervalName": "3",
+            "intervalNumber": 3,
+            "firstTeamScore": "0",
+            "secondTeamScore": "0"
+          },
+          {
+            "intervalName": "4",
+            "intervalNumber": 4,
+            "firstTeamScore": "0",
+            "secondTeamScore": "0"
+          },
+          {
+            "intervalName": "5",
+            "intervalNumber": 5,
+            "firstTeamScore": "",
+            "secondTeamScore": ""
+          },
+          {
+            "intervalName": "6",
+            "intervalNumber": 6,
+            "firstTeamScore": "",
+            "secondTeamScore": ""
+          },
+          {
+            "intervalName": "7",
+            "intervalNumber": 7,
+            "firstTeamScore": "",
+            "secondTeamScore": ""
+          },
+          {
+            "intervalName": "8",
+            "intervalNumber": 8,
+            "firstTeamScore": "",
+            "secondTeamScore": ""
+          },
+          {
+            "intervalName": "9",
+            "intervalNumber": 9,
+            "firstTeamScore": "",
+            "secondTeamScore": ""
+          },
+          {
+            "liveScoreData": {
+              "onServe": "2",
+              "baseballBase": "6",
+              "baseballOuts": "0"
+            },
+            "intervalName": "T",
+            "intervalNumber": 2147483647,
+            "firstTeamScore": "0",
+            "secondTeamScore": "0"
+          }
+        ],
+        "scorecardComponentId": 1
+      },
+      "tags": [
+        "FeaturedSubcategory",
+        "Flashbet",
+        "LiveBoxScore",
+        "OSB",
+        "SGP",
+        "SgpDynamicOdds",
+        "YourBetEligible"
+      ],
+      "metadata": {
+        "masterLeagueId": "233",
+        "numberOfParts": "9"
+      },
+      "sortOrder": 247384040,
+      "subscriptionKey": "league-events-84240"
+    }
+  ],
+  "markets": [
+    {
+      "id": "1_86306414",
+      "eventId": "34664940",
+      "sportId": "7",
+      "leagueId": "84240",
+      "name": "Moneyline",
+      "subcategoryId": 4519,
+      "marketType": {
+        "id": "1_39",
+        "betOfferTypeId": 2,
+        "name": "Moneyline"
+      },
+      "subscriptionKey": "league-events-84240",
+      "sortOrder": 186306414,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "dynamicMetadata": {}
+    },
+    {
+      "id": "2_86306414",
+      "eventId": "34664940",
+      "sportId": "7",
+      "leagueId": "84240",
+      "name": "Run Line",
+      "subcategoryId": 4519,
+      "marketType": {
+        "id": "2_39",
+        "betOfferTypeId": 1,
+        "name": "Run Line"
+      },
+      "subscriptionKey": "league-events-84240",
+      "sortOrder": 286306414,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "dynamicMetadata": {}
+    },
+    {
+      "id": "3_86306414",
+      "eventId": "34664940",
+      "sportId": "7",
+      "leagueId": "84240",
+      "name": "Total",
+      "subcategoryId": 4519,
+      "marketType": {
+        "id": "3_39",
+        "betOfferTypeId": 6,
+        "name": "Total"
+      },
+      "subscriptionKey": "league-events-84240",
+      "sortOrder": 386306414,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "statistics": {
+        "live": [
+          {
+            "type": "MarketStat",
+            "prefix": "Current",
+            "value": 0,
+            "showRecentStats": false
+          }
+        ]
+      },
+      "dynamicMetadata": {}
+    }
+  ],
+  "selections": [
+    {
+      "id": "0HC86306414N150_3",
+      "marketId": "2_86306414",
+      "label": "CHI White Sox",
+      "displayOdds": {
+        "american": "+120",
+        "decimal": "2.20",
+        "fractional": "6/5",
+        "percentage": "45.4%"
+      },
+      "trueOdds": 2.2,
+      "points": -1.5,
+      "outcomeType": "Away",
+      "participants": [
+        {
+          "id": "29970",
+          "name": "CHI White Sox",
+          "type": "Team",
+          "seoIdentifier": "White Sox",
+          "venueRole": "Away",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "79878"
+          }
+        }
+      ],
+      "sortOrder": -1501,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0HC86306414P150_1",
+      "marketId": "2_86306414",
+      "label": "CLE Guardians",
+      "displayOdds": {
+        "american": "−157",
+        "decimal": "1.63",
+        "fractional": "100/157",
+        "percentage": "61%"
+      },
+      "trueOdds": 1.63694268,
+      "points": 1.5,
+      "outcomeType": "Home",
+      "participants": [
+        {
+          "id": "29913",
+          "name": "CLE Guardians",
+          "type": "Team",
+          "seoIdentifier": "Guardians",
+          "venueRole": "Home",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "79870"
+          }
+        }
+      ],
+      "sortOrder": -1499,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0OU86306414O550_1",
+      "marketId": "3_86306414",
+      "label": "Over",
+      "displayOdds": {
+        "american": "−130",
+        "decimal": "1.76",
+        "fractional": "10/13",
+        "percentage": "56.5%"
+      },
+      "trueOdds": 1.76923077,
+      "points": 5.5,
+      "outcomeType": "Over",
+      "sortOrder": 5500,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0OU86306414U550_3",
+      "marketId": "3_86306414",
+      "label": "Under",
+      "displayOdds": {
+        "american": "+100",
+        "decimal": "2.00",
+        "fractional": "1/1",
+        "percentage": "50%"
+      },
+      "trueOdds": 2,
+      "points": 5.5,
+      "outcomeType": "Under",
+      "sortOrder": 5502,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0ML86306414_3",
+      "marketId": "1_86306414",
+      "label": "CHI White Sox",
+      "displayOdds": {
+        "american": "−153",
+        "decimal": "1.65",
+        "fractional": "100/153",
+        "percentage": "60.4%"
+      },
+      "trueOdds": 1.65359478,
+      "outcomeType": "Away",
+      "participants": [
+        {
+          "id": "29970",
+          "name": "CHI White Sox",
+          "type": "Team",
+          "seoIdentifier": "White Sox",
+          "venueRole": "Away",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "79878"
+          }
+        }
+      ],
+      "sortOrder": 7498951,
+      "tags": [
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0ML86306414_1",
+      "marketId": "1_86306414",
+      "label": "CLE Guardians",
+      "displayOdds": {
+        "american": "+118",
+        "decimal": "2.18",
+        "fractional": "59/50",
+        "percentage": "45.8%"
+      },
+      "trueOdds": 2.18,
+      "outcomeType": "Home",
+      "participants": [
+        {
+          "id": "29913",
+          "name": "CLE Guardians",
+          "type": "Team",
+          "seoIdentifier": "Guardians",
+          "venueRole": "Home",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "79870"
+          }
+        }
+      ],
+      "sortOrder": 7518947,
+      "tags": [
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    }
+  ],
+  "subscriptionPartials": {
+    "league-events-84240": {
+      "entity": "events",
+      "query": "$filter=leagueId eq '84240' and clientMetadata/Subcategories/any(s: s/Id eq '4519')&$orderBy=startEventDate asc",
+      "includeMarkets": "$filter=tags/all(t: t ne 'SportcastBetBuilder') and clientMetadata/subCategoryId eq '4519'"
+    },
+    "lcc-event-": {
+      "entity": "LiveContentCardEvent"
+    },
+    "cc-event-": {
+      "contentCardType": "All",
+      "entity": "ContentCardEvent"
+    }
+  }
+}

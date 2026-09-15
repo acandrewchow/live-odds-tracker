@@ -1,0 +1,389 @@
+{
+  "_comment": "Unmodified DraftKings response, trimmed to one event. See examples/README.md.",
+  "sports": [
+    {
+      "id": "3",
+      "seoIdentifier": "Football",
+      "name": "Football",
+      "sortOrder": 56
+    }
+  ],
+  "leagues": [
+    {
+      "id": "88808",
+      "name": "NFL",
+      "sportId": "3",
+      "sortOrder": 4847,
+      "tags": [
+        "OSB",
+        "EarlyExit",
+        "EarlyExitPlus",
+        "FeaturedSubcategory",
+        "SGP",
+        "SgpDynamicOdds",
+        "YourBetEligible",
+        "Featured",
+        "FavoriteableFromPage"
+      ],
+      "regions": [
+        {
+          "id": "227",
+          "name": "United States"
+        }
+      ],
+      "isTeamSwap": true,
+      "featured": true
+    }
+  ],
+  "events": [
+    {
+      "id": "34118255",
+      "seoIdentifier": "DEN Broncos @ KC Chiefs",
+      "sportId": "3",
+      "leagueId": "88808",
+      "name": "DEN Broncos @ KC Chiefs",
+      "startEventDate": "2026-09-15T00:15:00.0000000Z",
+      "participants": [
+        {
+          "id": "18379",
+          "name": "KC Chiefs",
+          "venueRole": "Home",
+          "type": "Team",
+          "metadata": {
+            "retailRotNumber": "131",
+            "rosettaTeamId": "18379",
+            "rosettaTeamName": "Chiefs",
+            "shortName": "KC",
+            "teamColor": "#E31837",
+            "teamColorSecondary": "#FFC208",
+            "teamColorTertiary": "#FFFFFF"
+          },
+          "sortOrder": 2,
+          "seoIdentifier": "Chiefs",
+          "isNationalTeam": false,
+          "countryCode": "US"
+        },
+        {
+          "id": "18342",
+          "name": "DEN Broncos",
+          "venueRole": "Away",
+          "type": "Team",
+          "metadata": {
+            "retailRotNumber": "130",
+            "rosettaTeamId": "18342",
+            "rosettaTeamName": "Broncos",
+            "shortName": "DEN",
+            "teamColor": "#0A2343",
+            "teamColorSecondary": "#FC4C02",
+            "teamColorTertiary": "#FFFFFF"
+          },
+          "sortOrder": 1,
+          "seoIdentifier": "Broncos",
+          "isNationalTeam": false,
+          "countryCode": "US"
+        }
+      ],
+      "eventParticipantType": "TwoTeam",
+      "status": "NOT_STARTED",
+      "eventScorecard": {
+        "scorecardComponentId": 1
+      },
+      "tags": [
+        "EarlyExit",
+        "EarlyExitPlus",
+        "FeaturedSubcategory",
+        "OSB",
+        "SGP",
+        "SgpDynamicOdds",
+        "YourBetEligible"
+      ],
+      "metadata": {
+        "masterLeagueId": "40",
+        "numberOfParts": "4",
+        "secondsInOnePart": "900"
+      },
+      "sortOrder": 247393555,
+      "subscriptionKey": "league-events-88808"
+    }
+  ],
+  "markets": [
+    {
+      "id": "1_84695698",
+      "eventId": "34118255",
+      "sportId": "3",
+      "leagueId": "88808",
+      "name": "Moneyline",
+      "subcategoryId": 4518,
+      "marketType": {
+        "id": "1_0",
+        "betOfferTypeId": 2,
+        "name": "Moneyline"
+      },
+      "subscriptionKey": "league-events-88808",
+      "sortOrder": 184695698,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "dynamicMetadata": {}
+    },
+    {
+      "id": "2_84695698",
+      "eventId": "34118255",
+      "sportId": "3",
+      "leagueId": "88808",
+      "name": "Spread",
+      "subcategoryId": 4518,
+      "marketType": {
+        "id": "2_0",
+        "betOfferTypeId": 1,
+        "name": "Spread"
+      },
+      "subscriptionKey": "league-events-88808",
+      "sortOrder": 284695698,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "dynamicMetadata": {}
+    },
+    {
+      "id": "3_84695698",
+      "eventId": "34118255",
+      "sportId": "3",
+      "leagueId": "88808",
+      "name": "Total",
+      "subcategoryId": 4518,
+      "marketType": {
+        "id": "3_0",
+        "betOfferTypeId": 6,
+        "name": "Total"
+      },
+      "subscriptionKey": "league-events-88808",
+      "sortOrder": 384695698,
+      "tags": [
+        "SGP",
+        "YourBetEligible",
+        "Cashout",
+        "FeaturedSubcategory",
+        "OSB",
+        "Default",
+        "PrimaryMarket"
+      ],
+      "main": true,
+      "dynamicMetadata": {}
+    }
+  ],
+  "selections": [
+    {
+      "id": "0HC84695698P250_3",
+      "marketId": "2_84695698",
+      "label": "DEN Broncos",
+      "displayOdds": {
+        "american": "−112",
+        "decimal": "1.89",
+        "fractional": "25/28",
+        "percentage": "52.8%"
+      },
+      "trueOdds": 1.89285715,
+      "points": 2.5,
+      "outcomeType": "Away",
+      "participants": [
+        {
+          "id": "18342",
+          "name": "DEN Broncos",
+          "type": "Team",
+          "seoIdentifier": "Broncos",
+          "venueRole": "Away",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "466"
+          }
+        }
+      ],
+      "sortOrder": 2499,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0HC84695698N250_1",
+      "marketId": "2_84695698",
+      "label": "KC Chiefs",
+      "displayOdds": {
+        "american": "−108",
+        "decimal": "1.92",
+        "fractional": "25/27",
+        "percentage": "51.9%"
+      },
+      "trueOdds": 1.92592593,
+      "points": -2.5,
+      "outcomeType": "Home",
+      "participants": [
+        {
+          "id": "18379",
+          "name": "KC Chiefs",
+          "type": "Team",
+          "seoIdentifier": "Chiefs",
+          "venueRole": "Home",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "463"
+          }
+        }
+      ],
+      "sortOrder": 2501,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0OU84695698O4250_1",
+      "marketId": "3_84695698",
+      "label": "Over",
+      "displayOdds": {
+        "american": "−110",
+        "decimal": "1.90",
+        "fractional": "10/11",
+        "percentage": "52.3%"
+      },
+      "trueOdds": 1.90909091,
+      "points": 42.5,
+      "outcomeType": "Over",
+      "sortOrder": 42500,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0OU84695698U4250_3",
+      "marketId": "3_84695698",
+      "label": "Under",
+      "displayOdds": {
+        "american": "−110",
+        "decimal": "1.90",
+        "fractional": "10/11",
+        "percentage": "52.3%"
+      },
+      "trueOdds": 1.90909091,
+      "points": 42.5,
+      "outcomeType": "Under",
+      "sortOrder": 42502,
+      "tags": [
+        "MainPointLine",
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0ML84695698_3",
+      "marketId": "1_84695698",
+      "label": "DEN Broncos",
+      "displayOdds": {
+        "american": "+110",
+        "decimal": "2.10",
+        "fractional": "11/10",
+        "percentage": "47.6%"
+      },
+      "trueOdds": 2.1,
+      "outcomeType": "Away",
+      "participants": [
+        {
+          "id": "18342",
+          "name": "DEN Broncos",
+          "type": "Team",
+          "seoIdentifier": "Broncos",
+          "venueRole": "Away",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "466"
+          }
+        }
+      ],
+      "sortOrder": 4995424,
+      "tags": [
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    },
+    {
+      "id": "0ML84695698_1",
+      "marketId": "1_84695698",
+      "label": "KC Chiefs",
+      "displayOdds": {
+        "american": "−130",
+        "decimal": "1.76",
+        "fractional": "10/13",
+        "percentage": "56.5%"
+      },
+      "trueOdds": 1.76923077,
+      "outcomeType": "Home",
+      "participants": [
+        {
+          "id": "18379",
+          "name": "KC Chiefs",
+          "type": "Team",
+          "seoIdentifier": "Chiefs",
+          "venueRole": "Home",
+          "isNationalTeam": false,
+          "countryCode": "US",
+          "metadata": {
+            "sdid": "463"
+          }
+        }
+      ],
+      "sortOrder": 5015420,
+      "tags": [
+        "SGP",
+        "OSB"
+      ],
+      "main": true,
+      "metadata": {}
+    }
+  ],
+  "subscriptionPartials": {
+    "league-events-88808": {
+      "entity": "events",
+      "query": "$filter=leagueId eq '88808' and clientMetadata/Subcategories/any(s: s/Id eq '4518')&$orderBy=startEventDate asc",
+      "includeMarkets": "$filter=tags/all(t: t ne 'SportcastBetBuilder') and clientMetadata/subCategoryId eq '4518'"
+    },
+    "lcc-event-": {
+      "entity": "LiveContentCardEvent"
+    },
+    "cc-event-": {
+      "contentCardType": "All",
+      "entity": "ContentCardEvent"
+    }
+  }
+}
