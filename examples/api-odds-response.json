@@ -1,0 +1,120 @@
+{
+  "league": "nfl",
+  "games": [
+    {
+      "id": "34118255",
+      "startsAt": "2026-09-15T00:15:00.0000000Z",
+      "home": "KC Chiefs",
+      "away": "DEN Broncos",
+      "homeShort": "KC",
+      "awayShort": "DEN",
+      "status": "NOT_STARTED",
+      "live": false,
+      "markets": {
+        "moneyline": {
+          "kind": "moneyline",
+          "sides": [
+            {
+              "label": "DEN Broncos",
+              "odds": 110
+            },
+            {
+              "label": "KC Chiefs",
+              "odds": -130
+            }
+          ]
+        },
+        "spread": {
+          "kind": "spread",
+          "sides": [
+            {
+              "label": "DEN Broncos",
+              "odds": -112,
+              "line": 2.5
+            },
+            {
+              "label": "KC Chiefs",
+              "odds": -108,
+              "line": -2.5
+            }
+          ]
+        },
+        "total": {
+          "kind": "total",
+          "sides": [
+            {
+              "label": "Over",
+              "odds": -110,
+              "line": 42.5
+            },
+            {
+              "label": "Under",
+              "odds": -110,
+              "line": 42.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34118219",
+      "startsAt": "2026-09-18T00:15:00.0000000Z",
+      "home": "BUF Bills",
+      "away": "DET Lions",
+      "homeShort": "BUF",
+      "awayShort": "DET",
+      "status": "NOT_STARTED",
+      "live": false,
+      "markets": {
+        "moneyline": {
+          "kind": "moneyline",
+          "sides": [
+            {
+              "label": "DET Lions",
+              "odds": 170
+            },
+            {
+              "label": "BUF Bills",
+              "odds": -205
+            }
+          ]
+        },
+        "spread": {
+          "kind": "spread",
+          "sides": [
+            {
+              "label": "DET Lions",
+              "odds": -112,
+              "line": 4.5
+            },
+            {
+              "label": "BUF Bills",
+              "odds": -108,
+              "line": -4.5
+            }
+          ]
+        },
+        "total": {
+          "kind": "total",
+          "sides": [
+            {
+              "label": "Over",
+              "odds": -115,
+              "line": 53.5
+            },
+            {
+              "label": "Under",
+              "odds": -105,
+              "line": 53.5
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "fetchedAt": 1789430959676,
+  "fetchMs": 8,
+  "lastSuccessAt": 1789430959676,
+  "ageMs": 0,
+  "failures": 0
+}
