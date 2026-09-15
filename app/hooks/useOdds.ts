@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { computeAge } from "@/lib/age";
 import type { League } from "@/lib/leagues";
 import type { Snapshot } from "@/lib/types";
 
@@ -130,11 +131,7 @@ export function useOdds(league: League) {
 
   const snapshot = received?.snapshot ?? null;
 
-  // Calculates the age
-  const ageMs =
-    received && received.snapshot.ageMs >= 0
-      ? received.snapshot.ageMs + Math.max(0, now - received.receivedAt)
-      : Infinity;
+  const ageMs = computeAge(received?.snapshot.ageMs, received?.receivedAt, now);
 
   const stale = !snapshot || ageMs > STALE_AFTER_MS || (snapshot.failures ?? 0) > 0;
 
