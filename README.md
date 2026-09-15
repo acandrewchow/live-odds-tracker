@@ -154,6 +154,25 @@ No rate limit found. I ramped to 20 req/sec sustained and 30 concurrent — 230
 requests, zero non-200s. That bounds any limit above 20× what this app does; it
 does not prove there is none.
 
+### Polling, not the WebSocket
+
+DraftKings has a push feed at `wss://sportsbook-ws-us-oh.draftkings.com/websocket`.
+The protocol is **JSON-RPC 2.0** — identifiable from its `-32700` / `-32600` /
+`-32601` error codes — and the REST payload hands you the subscription arguments
+in a `subscriptionPartials` block. `subscribe` accepts them and the connection
+holds open, but it pushed **zero frames in three minutes while REST demonstrably
+moved**. Ran four parameter variants concurrently against a REST poller to
+rule out a quiet market.
+
+Polling at 1 Hz puts the average age on screen at ~0.6s, and about 80% of that is just waiting for the next tick. DraftKings' WebSocket would remove the wait and the request round-trip, which call it tens of milliseconds instead resulting why it's the right long-term answer. I got as far as the JSON-RPC handshake but couldn't get it to push, and polling was already under a second, so I shipped that and wrote up what I found.
+
+### Full snapshots, not deltas
+
+The feed sends the complete picture every time. **Any single response renders
+the whole page**, so a dropped or malformed one costs a second of freshness
+rather than corrupting accumulated state. The WebSocket is the delta-shaped
+feed, and adopting it means owning that reconstruction problem.
+
 ### SSE to the browser
 
 SSE is an HTTP response that never ends. The server polls every second either
@@ -270,3 +289,15 @@ Every mode above was tested against the running app by pointing
 `DK_ODDS_URL` at a deliberately broken server
 
 ---
+
+## Adding a new sportsbook
+
+`lib/draftkings.ts` is already an adapter — it fetches, and maps to a common
+`{ game, market, side, line, odds }` shape. Nothing above `lib/store.ts` knows
+DraftKings exists. A second book is that same interface implemented again, plus
+keying the store by book as well as league. 
+
+Identity for unique events i.e. `NY Giants` vs `New York Giants` vs `NYG`.
+Comparing two books side by side means two rows are the same game
+and the same market, which needs a canonical id per team and event fed by a
+per-book alias table.
